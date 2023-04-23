@@ -1,7 +1,7 @@
-package dao;
+package com.practic.dao;
 
-import model.Car;
-import model.User;
+import com.practic.model.Car;
+import com.practic.model.User;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -40,9 +40,9 @@ public class UserDaoImp implements UserDao {
         return queryCar.getResultList();
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+   /* @Override
     public User findOwner(String model, int series) {
+
         TypedQuery<Car> findCarQuery = sessionFactory.getCurrentSession().createQuery("from Car where :model and :series")
                 .setParameter("model", model)
                 .setParameter("series", series);
@@ -56,5 +56,15 @@ public class UserDaoImp implements UserDao {
                     .orElse(null);
         }
         return null;
+    }*/
+    @Override
+    @SuppressWarnings("unchecked")
+    public User findOwner(String model, int series) {
+
+        TypedQuery<User> listUser = sessionFactory.getCurrentSession().createQuery("from User JOIN FETCH Car where :model and :series")
+                .setParameter("model", model)
+                .setParameter("series", series);
+       return (User) listUser.getResultList();
+
     }
 }

@@ -1,7 +1,7 @@
-package dao;
+package com.practic.dao;
 
-import model.Car;
-import model.User;
+import com.practic.model.Car;
+import com.practic.model.User;
 
 import java.util.List;
 

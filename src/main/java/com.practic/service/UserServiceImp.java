@@ -1,10 +1,9 @@
-package service;
+package com.practic.service;
 
-import dao.UserDao;
-import model.Car;
-import model.User;
+import com.practic.dao.UserDao;
+import com.practic.model.Car;
+import com.practic.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,7 +12,6 @@ import java.util.List;
 @Service
 public class UserServiceImp implements UserService {
     @Autowired
-    @Lazy
     private UserDao userDao;
 
     @Transactional

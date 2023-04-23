@@ -1,7 +1,7 @@
-package config;
+package com.practic.config;
 
-import model.Car;
-import model.User;
+import com.practic.model.Car;
+import com.practic.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -19,7 +19,7 @@ import java.util.Properties;
 @Configuration
 @PropertySource("classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScan(value = "java")
+@ComponentScan(basePackages = "practic")
 public class AppConfig {
     @Autowired
     private Environment env;

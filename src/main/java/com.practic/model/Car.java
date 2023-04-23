@@ -1,4 +1,4 @@
-package model;
+package com.practic.model;
 
 import javax.persistence.*;
 import java.util.Objects;

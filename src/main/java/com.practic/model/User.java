@@ -1,4 +1,4 @@
-package model;
+package com.practic.model;
 
 import javax.persistence.*;
 
@@ -87,4 +87,7 @@ public class User {
                 ", email='" + email + '\'' +
                 '}';
     }
+
+
+
 }

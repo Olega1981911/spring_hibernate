@@ -1,8 +1,10 @@
-import config.AppConfig;
-import model.Car;
-import model.User;
+package com.practic;
+
+import com.practic.config.AppConfig;
+import com.practic.model.Car;
+import com.practic.model.User;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import service.UserService;
+import com.practic.service.UserService;
 
 import java.sql.SQLException;
 import java.util.List;

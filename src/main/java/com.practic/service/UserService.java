@@ -1,8 +1,7 @@
-package service;
+package com.practic.service;
 
-import model.Car;
-import model.User;
-import org.springframework.stereotype.Service;
+import com.practic.model.Car;
+import com.practic.model.User;
 
 import java.util.List;
 
